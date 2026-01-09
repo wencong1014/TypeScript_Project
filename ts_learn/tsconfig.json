@@ -1,0 +1,54 @@
+{
+  // // Visit https://aka.ms/tsconfig to read more about this file
+  // "compilerOptions": {
+  //   // File Layout
+  //   // "rootDir": "./src",
+  //   // "outDir": "./dist",
+
+  //   // Environment Settings
+  //   // See also https://aka.ms/tsconfig/module
+  //   "module": "nodenext",
+  //   "target": "esnext",
+  //   "types": [],
+  //   // For nodejs:
+  //   // "lib": ["esnext"],
+  //   // "types": ["node"],
+  //   // and npm install -D @types/node
+
+  //   // Other Outputs
+  //   "sourceMap": true,
+  //   "declaration": true,
+  //   "declarationMap": true,
+
+  //   // Stricter Typechecking Options
+  //   "noUncheckedIndexedAccess": true,
+  //   "exactOptionalPropertyTypes": true,
+
+  //   // Style Options
+  //   // "noImplicitReturns": true,
+  //   // "noImplicitOverride": true,
+  //   // "noUnusedLocals": true,
+  //   // "noUnusedParameters": true,
+  //   // "noFallthroughCasesInSwitch": true,
+  //   // "noPropertyAccessFromIndexSignature": true,
+
+  //   // Recommended Options
+  //   "strict": true,
+  //   "jsx": "react-jsx",
+  //   "verbatimModuleSyntax": true,
+  //   "isolatedModules": true,
+  //   "noUncheckedSideEffectImports": true,
+  //   "moduleDetection": "force",
+  //   "skipLibCheck": true,
+  // }
+  "compilerOptions": {
+    "target": "es2016", //编译后JS版本（ES3/ES5/ES6+）
+    "module": "commonjs", //编译规范（CommonJS/ESNext/AMD）
+    "outDir": "./dist", //编译后JS文件输出目录
+    "rootDir": "./src", //TS源码目录
+    "strict": true, //开启严格模式（强烈推荐，强制类型校验）
+    "esModuleInterop": true, //兼容CommonJS和ESM模块
+  },
+  "include": ["./src/**/*"], //编译文件范围（默认包含所有ts文件）
+  "exclude": ["node_modules"] //排除文件范围（默认不包含node_modules）
+}
