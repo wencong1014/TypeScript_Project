@@ -1,5 +1,7 @@
 // hello.ts
 
+export {};
+
 let message: string = "hello, typescript!";
 console.log(message);
 
@@ -335,3 +337,19 @@ const userWithoutAge: UserWithoutAge = { id: 1, name: "张三" };
 
 // 5. Record<K, T>：通用对象类型（快速创建对象类型，常用）
 // 场景 1：键为 string，值为 User（用户列表）
+type UserList = Record<string, UserC>;
+const userList: UserList = {
+	"1": { id: 1, name: "张三", age: 25 },
+	"2": { id: 2, name: "李四", age: 26 },
+};
+
+// 场景 2：键为联合类型，值为 string（状态描述）
+type Status = "success" | "error" | "loading";
+type StatusDesc = Record<Status, string>;
+const statusDesc: StatusDesc = {
+	success: "成功",
+	error: "失败",
+	loading: "加载中",
+};
+
+

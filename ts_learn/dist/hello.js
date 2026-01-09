@@ -1,5 +1,6 @@
 "use strict";
 // hello.ts
+Object.defineProperty(exports, "__esModule", { value: true });
 let message = "hello, typescript!";
 console.log(message);
 console.log('I say "Hi"');
@@ -202,3 +203,14 @@ console.log(upd);
 // 2. Readonly<T>：只读属性（防止对象被修改）
 const readonlyUser = { id: 2, name: "王二麻子", age: 22 };
 console.log(readonlyUser);
+const basicInfo = { id: 1, name: "张三" };
+const userWithoutAge = { id: 1, name: "张三" };
+const userList = {
+    "1": { id: 1, name: "张三", age: 25 },
+    "2": { id: 2, name: "李四", age: 26 },
+};
+const statusDesc = {
+    success: "成功",
+    error: "失败",
+    loading: "加载中",
+};
